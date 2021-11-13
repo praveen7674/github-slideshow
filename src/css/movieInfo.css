@@ -1,0 +1,141 @@
+.movie_info {
+  border: 5px solid #bc43da;
+  border-radius: 15px;
+  margin-left: 117px;
+  width: 1400px;
+  height: 902px;
+  margin: 70px 70px 70px 400px;
+}
+.movie_com_detail {
+  margin-left: 650px;
+}
+.movie_name {
+  position: absolute;
+  width: 600px;
+  height: 47px;
+  top: 127px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  color: #ffffff;
+}
+.directedby,
+.actors,
+.cast,
+.country {
+  position: absolute;
+  width: 600px;
+  height: 156px;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #bc43da;
+}
+.directedby {
+  top: 318px;
+}
+.actors {
+  top: 378px;
+}
+.cast {
+  top: 438px;
+}
+.country {
+  top: 498px;
+}
+.description {
+  position: absolute;
+  width: 720px;
+  height: 156px;
+  top: 650px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #61678a;
+}
+.movieDetail {
+  position: absolute;
+  width: 720px;
+  height: 26px;
+  top: 188px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.play:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.play {
+  position: absolute;
+  width: 155px;
+  height: 50px;
+  font-weight: bold;
+  margin-left: 200px;
+  color: #ffffff;
+  transition: transform 450ms;
+  background: #bc43da;
+  border-radius: 10px;
+}
+.play,
+.trailer,
+.add_Fav {
+  top: 560px;
+}
+.add_Fav {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  transition: transform 450ms;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 400px;
+  background: #474e79;
+  border-radius: 10px;
+}
+.add_Fav:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.trailer {
+  position: absolute;
+  width: 155px;
+  height: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 0;
+  transition: transform 450ms;
+  background: #bc43da;
+  border-radius: 10px;
+}
+.trailer:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.player-wrapper2 {
+  position: relative;
+  /* height: 100vh; */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+video {
+  object-fit: fill;
+  border-radius: 5px;
+}
+.movies_container > img {
+  width: 595px;
+  border-radius: 10px;
+}

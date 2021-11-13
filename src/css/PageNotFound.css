@@ -1,0 +1,13 @@
+#not_found_img {
+  background-image: url(..//Assets/404.jpg);
+  width: 830px;
+  height: 500px;
+}
+.not_found {
+  width: 100%;
+  height: 1000px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}

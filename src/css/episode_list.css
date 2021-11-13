@@ -1,0 +1,49 @@
+.all_episodes_container{
+    margin-left: 117px;
+
+}
+.all_episode{
+    margin: 0;
+    margin-top: 50px;
+    margin-bottom: 10px;
+    text-align: center;
+    font-size: 28px;
+}
+.all_episode_list{
+    padding-left: 15px;
+    margin: 0;
+    font-size: 20px;
+}
+.all_episode_list_container{
+    display: flex;
+    flex-wrap: wrap;
+    cursor: pointer;
+    color: #fff;
+    align-content: space-around;
+}
+.all_episode_img_container{
+    object-fit: fill;
+    transition: transform 450ms;
+    border: 2px solid #ffffff;
+    box-sizing: border-box;
+    border-radius: 15px;
+    width: 437px;
+    margin: 0 20px 0px 20px;
+    height: 248px;
+  }
+  .all_episode_img_container:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+    transition: 0.3s;
+  }
+#all_episode_detail{
+    margin-top: 0;
+    margin-left: 20px;
+    margin-bottom:40px;
+    font-size: 20px;
+    white-space:nowrap;
+    overflow: hidden;
+    text-overflow:ellipsis;
+    max-width: 435px;
+    color: #bc43da;
+}

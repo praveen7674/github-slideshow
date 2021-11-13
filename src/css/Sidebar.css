@@ -1,0 +1,233 @@
+ul {
+  list-style-type: none;
+}
+.sidebar_css {
+  position: fixed;
+  width: 360px;
+  height: 100%;
+  top: 0;
+  background: #1e2550;
+  box-shadow: 0px 0px 50px rgba(30, 37, 80, 0.5);
+}
+.sidebar_menu_icon {
+  margin-top: 40px;
+  color: #bc43da;
+  font-size: 30px;
+  text-align: center;
+}
+.back_img {
+  background-image: url("../Assets/purple_logo\ 1.png");
+  position: fixed;
+  width: 250px;
+  height: 52.66px;
+  left: 60px;
+  top: 125px;
+}
+/* .sidebar_searchIcon {
+  position: absolute;
+  left: 110px;
+  width: 30px;
+  height: 30px;
+  color: #ffffff;
+} */
+.sidebar_search {
+  position: fixed;
+  width: 277px;
+  height: 43px;
+  left: 35px;
+  top: 220px;
+  background: #bc43da;
+  border-radius: 50px;
+}
+.sidebar_search > input {
+  font-size: larger;
+  width: 80px;
+}
+.sidebar_search ::placeholder {
+  position: absolute;
+  width: 120px;
+  height: 26px;
+  left: 60px;
+  top: 0;
+  font-weight: bold;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 28px;
+  color: #ffffff;
+}
+.sidebar_icon_home {
+  position: fixed;
+  left: 100px;
+  width: 26px;
+  height: 24px;
+  color: #ffffff;
+  top: 320px;
+  background: url(../Assets/Vector.png);
+}
+.sidebar_link_home {
+  position: fixed;
+  width: 70px;
+  height: 30px;
+  left: 170px;
+  top: 320px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.icon_live_tv2 {
+  position: fixed;
+  width: 31px;
+  height: 32px;
+  left: 100px;
+  color: #ffffff;
+  top: 400px;
+  background: url(../Assets/icontv.png);
+}
+.link_live_tv {
+  position: fixed;
+  width: 85px;
+  height: 30px;
+  left: 164px;
+  top: 400px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.icon_movie2 {
+  position: fixed;
+  width: 30px;
+  color: #ffffff;
+  height: 30px;
+  left: 100px;
+  top: 480px;
+  background: url(../Assets/movies.png);
+}
+.link_movies {
+  position: absolute;
+  width: 84px;
+  height: 30px;
+  left: 170px;
+  top: 480px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.icon_series2 {
+  position: fixed;
+  width: 30px;
+  height: 22px;
+  left: 100px;
+  color: #ffffff;
+  top: 560px;
+  background: url(../Assets/series.png);
+}
+.link_series {
+  position: fixed;
+  width: 72px;
+  height: 30px;
+  left: 170px;
+  top: 560px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.icon_fav {
+  position: absolute;
+  width: 29px;
+  height: 27px;
+  left: 100px;
+  font-size: 28px;
+  top: 640px;
+  color: #ffffff;
+}
+.link_fav {
+  position: absolute;
+  width: 84px;
+  height: 30px;
+  left: 170px;
+  top: 640px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.icon_rec {
+  position: absolute;
+  width: 29px;
+  height: 27px;
+  left: 100px;
+  font-size: 28px;
+  top: 720px;
+  color: #ffffff;
+}
+.link_rec {
+  position: absolute;
+  width: 72px;
+  height: 30px;
+  left: 170px;
+  top: 720px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.icon_set {
+  position: absolute;
+  width: 29px;
+  height: 27px;
+  font-size: 28px;
+  left: 100px;
+  top: 800px;
+  background: #ffffff;
+  background: url(../Assets/iconset.png);
+}
+.link_set {
+  position: absolute;
+  width: 82px;
+  height: 30px;
+  left: 170px;
+  top: 800px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 26px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.link_log_out {
+  position: absolute;
+  width: 95px;
+  height: 30px;
+  left: 160px;
+  top: 950px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 28px;
+  line-height: 30px;
+  color: #ffffff;
+}
+.icon_log_out2 {
+  position: absolute;
+  width: 29px;
+  height: 27px;
+  left: 100px;
+  top: 950px;
+  color: #ffffff;
+}

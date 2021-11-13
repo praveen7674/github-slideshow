@@ -1,0 +1,151 @@
+.series_info {
+  border: 2px solid #bc43da;
+  border-radius: 15px;
+  margin-left: 117px;
+  width: 1400px;
+  height: 1060px;
+  margin: 70px 70px 70px 400px;
+}
+.series_com_detail {
+  margin-left: 650px;
+}
+.series_info_poster {
+  width: 430px;
+  height: 500px;
+  border: 5px solid #bc43da;
+  margin: 58px 20px 20px 104px;
+}
+.series_name {
+  position: absolute;
+  width: 600px;
+  height: 47px;
+  top: 127px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 40px;
+  line-height: 47px;
+  color: #ffffff;
+}
+.series_cast {
+  position: absolute;
+  width: 600px;
+  height: 156px;
+  font-family: Roboto;
+  font-style: normal;
+  font-size: 18px;
+  font-weight: bold;
+  line-height: 26px;
+  color: #bc43da;
+}
+.series_cast {
+  top: 225px;
+}
+.series_description {
+  position: absolute;
+  width: 720px;
+  height: 156px;
+  top: 290px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #61678a;
+}
+.seriesDetail {
+  position: absolute;
+  width: 720px;
+  height: 26px;
+  top: 180px;
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 22px;
+  line-height: 26px;
+  color: #ffffff;
+}
+.series_play {
+  position: absolute;
+  width: 155px;
+  height: 50px;
+  font-weight: bold;
+  margin-left: 170px;
+  color: #ffffff;
+  transition: transform 450ms;
+  background: #bc43da;
+  border-radius: 10px;
+}
+.series_play,
+.series_trailer,
+.series_add_Fav,
+.series_episodes {
+  top: 590px;
+}
+.series_add_Fav {
+  position: absolute;
+  width: 155px;
+  height: 50px;
+  transition: transform 450ms;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 512px;
+  background: #474e79;
+  border-radius: 10px;
+}
+.series_add_Fav:hover,
+.series_episodes:hover,
+.series_play:hover,
+.series_trailer:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.series_trailer {
+  position: absolute;
+  width: 155px;
+  height: 50px;
+  font-weight: bold;
+  color: #ffffff;
+  margin-left: 0;
+  transition: transform 450ms;
+  background: #bc43da;
+  border-radius: 10px;
+}
+.series_episodes {
+  position: absolute;
+  width: 155px;
+  height: 50px;
+  transition: transform 450ms;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 340px;
+  background: #bc43da;
+  border-radius: 10px;
+}
+.series_info_season::-webkit-scrollbar {
+  display: none;
+}
+.series_info_season {
+  top: 600px;
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  overflow-y: hidden;
+  height: 420px;
+  width: 1300px;
+  margin-left: 50px;
+}
+.series_season_img {
+  width: 240px;
+  height: 370px;
+  margin: 10px;
+  margin-bottom: 0px;
+}
+.series_season_name {
+  font-size: 16px;
+  margin: 0px 0px 0px 10px;
+}
+.seasons4 {
+  margin: 0px 0px 0px 60px;
+}

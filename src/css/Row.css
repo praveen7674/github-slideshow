@@ -1,0 +1,46 @@
+.row_container {
+  color: #fff;
+  margin-left: 117px;
+}
+.movie_container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 20px;
+  cursor: pointer;
+}
+.movie_image {
+  margin: 10px;
+  object-fit: fill;
+  transition: transform 450ms;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 15px;
+  width: 259px;
+  height: 311px;
+}
+.movie_image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.movie_container::-webkit-scrollbar {
+  display: none;
+}
+.row_container > h3 {
+  margin: 0;
+}
+.styles-module_carousel-base__3keqD {
+  width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  outline: none;
+  user-select: none;
+  font-size: 20px;
+  justify-content: center;
+  z-index: 10;
+  color: #bc43da;
+}
+.styles-module_carousel-base__3keqD > div > svg {
+  margin-top: 142px;
+}

@@ -1,0 +1,75 @@
+.categaries > h1 {
+  left: 400px;
+  font-size: 24px;
+  text-align: center;
+  cursor: pointer;
+  padding-left: 10px;
+}
+.list_tv > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 20px;
+  margin: 0;
+  text-overflow: ellipsis;
+  max-width: 435px;
+}
+.list_tv {
+  width: 420px;
+  left: 440px;
+  top: 300px;
+  background: #1e2550;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+}
+.categaries_list {
+  overflow-y: scroll;
+  height: 890px;
+  text-align: center;
+  object-fit: cover;
+}
+.categaries_list::-webkit-scrollbar {
+  display: none;
+}
+.boxing {
+  display: flex;
+  margin-left: 120px;
+  margin-top: 123px;
+  justify-content: center;
+}
+.channels > h1 {
+  font-size: 24px;
+  cursor: pointer;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.list_channel > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+  font-size: 20px;
+}
+.list_channel {
+  width: 420px;
+  left: 440px;
+  top: 300px;
+  background: #1e2550;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
+}
+.channel_list {
+  overflow-y: scroll;
+  height: 890px;
+  text-align: center;
+  object-fit: cover;
+}
+.channel_list::-webkit-scrollbar {
+  display: none;
+}
+#player {
+  margin-top: 46px;
+  width: 55%;
+}

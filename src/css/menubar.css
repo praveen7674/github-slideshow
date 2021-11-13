@@ -1,0 +1,97 @@
+.nav_menu {
+  position: fixed;
+  width: 100px;
+  top: 0;
+  height: 100%;
+  background: #1e2550;
+  box-shadow: 0px 0px 50px rgba(30, 37, 80, 0.5);
+}
+.menu_icon {
+  font-size: 30px;
+  margin-top: 40px;
+  text-align: center;
+  color: #bc43da;
+}
+.menu_logo {
+  background-image: url(..//Assets/logonew.png);
+  position: fixed;
+  width: 52px;
+  height: 52.66px;
+  top: 125px;
+  left: 24px;
+}
+.search_menu {
+  background-image: url(..//Assets/search.png);
+  position: fixed;
+  width: 26px;
+  height: 26px;
+  top: 240px;
+  left: 33px;
+  color: #ffffff;
+}
+.icon_home {
+  background-image: url(..//Assets/Vector.png);
+  position: fixed;
+  width: 26px;
+  height: 24px;
+  top: 320px;
+  left: 33px;
+  color: #ffffff;
+}
+.icon_live_tv {
+  background-image: url(..//Assets/icontv.png);
+  position: absolute;
+  width: 31px;
+  height: 32px;
+  top: 400px;
+  left: 33px;
+  color: #ffffff;
+}
+.icon_movie {
+  background-image: url(..//Assets/iconmovies.png);
+  position: fixed;
+  width: 30px;
+  height: 30px;
+  top: 480px;
+  left: 33px;
+  color: #ffffff;
+}
+.icon_series {
+  background-image: url(..//Assets/series.png);
+  position: fixed;
+  width: 30px;
+  height: 22px;
+  top: 560px;
+  left: 33px;
+  color: #ffffff;
+}
+.icon_favorite {
+  position: fixed;
+  top: 640px;
+  left: 30px;
+  font-size: 28px;
+  color: #ffffff;
+}
+.icon_recent {
+  position: fixed;
+  top: 720px;
+  left: 30px;
+  font-size: 28px;
+  color: #ffffff;
+}
+.icon_setting {
+  background-image: url(..//Assets/iconset.png);
+  position: fixed;
+  top: 800px;
+  left: 30px;
+  width: 28px;
+  height: 27px;
+  color: #ffffff;
+}
+.icon_log_out {
+  position: fixed;
+  top: 950px;
+  left: 30px;
+  font-size: 28px;
+  color: #ffffff;
+}

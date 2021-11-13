@@ -1,0 +1,28 @@
+.seriesrow_container {
+  color: #fff;
+  margin-left: 117px;
+}
+.series_container {
+  display: flex;
+  flex-direction: row;
+  overflow-x: scroll;
+  padding: 20px;
+  cursor: pointer;
+}
+.series_image {
+  margin: 10px;
+  width: 240px;
+  height: 300px;
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 15px;
+  transition: transform 300ms;
+}
+.series_image:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.series_container::-webkit-scrollbar {
+  display: none;
+}
