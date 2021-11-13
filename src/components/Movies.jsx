@@ -4,7 +4,6 @@ import "..//css/movies.css";
 import axios from "axios";
 import Row from "./row";
 import Menubar from "./Menubar";
-import Wait from "./Wait";
 
 function Movies() {
   const [movies_category_list, setMovies_Category_List] = useState([]);

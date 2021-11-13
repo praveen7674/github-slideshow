@@ -1,14 +1,17 @@
 import React from "react";
 import Menubar from "./Menubar";
-import Navbar from "./Navbar";
-
+import { Card } from "react-bootstrap";
 const Home = () => {
   return (
-    <div>
+    <React.Fragment>
       <Menubar />
-      <Navbar head="Home" />
+      <div>
+        <Card style={{ width: "18rem" }}>
+          <Card.Img variant="top" src="..//Assets/.live.png" />
+        </Card>
+      </div>
       <h2>Home</h2>
-    </div>
+    </React.Fragment>
   );
 };
 
