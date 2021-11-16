@@ -36,7 +36,7 @@ function Menubar() {
               <Link to="/Series">
                 <div className="icon_series"></div>
               </Link>
-              <Link to="/Favorite">
+              <Link to="/favourite">
                 <div className="icon_favorite">
                   <MdOutlineFavoriteBorder />
                 </div>

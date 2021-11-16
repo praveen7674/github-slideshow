@@ -10,6 +10,8 @@ const LiveTv = () => {
   const [category, setCategory] = useState([]);
   const [channel, setChannel] = useState([]);
   const [wait, setWait] = useState(false);
+  const [categorys, setCategorys] = useState("23");
+  const [channels, setChannels] = useState(3043214);
 
   useEffect(() => {
     handleChannelLogic();
@@ -38,15 +40,18 @@ const LiveTv = () => {
     URL: "",
   });
 
-  async function handleClick(i) {
+  async function handleClick(i, a) {
     const myChannel = allChannel.filter((c) => c.category_id === i.category_id);
     setChannel(myChannel);
+    setCategorys(a);
   }
 
   const tvHandleClick = (i) => {
     const Url = "http://xtremity.tv:2052/live/qyf9ax/p7au3w/" + i + ".m3u8";
     setState({ URL: Url });
+    setChannels(i);
   };
+
   return (
     <React.Fragment>
       <Menubar />
@@ -58,8 +63,10 @@ const LiveTv = () => {
               <div className="categaries_list">
                 {category.map((x) => (
                   <div
-                    onClick={() => handleClick(x)}
-                    className="list_tv"
+                    onClick={() => handleClick(x, x.category_id)}
+                    className={
+                      categorys === x.category_id ? "active-color" : "list_tv"
+                    }
                     key={x.category_name}
                     value={x.category_id}
                   >
@@ -74,7 +81,11 @@ const LiveTv = () => {
                 {channel.map((channel_l) => (
                   <div
                     onClick={() => tvHandleClick(channel_l.stream_id)}
-                    className="list_channel"
+                    className={
+                      channels === channel_l.stream_id
+                        ? "active-color"
+                        : "list_channel"
+                    }
                     key={channel_l.stream_id}
                   >
                     <h3>{channel_l.name}</h3>

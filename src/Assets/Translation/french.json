@@ -1,0 +1,25 @@
+{
+  "user_info_btn": "informations utilisateur",
+
+  "change_lang_btn": "Changer de langue",
+
+  "acc_info": "Utilisateur Acc. Info",
+
+  "acc_name": "Nom du compte :",
+
+  "acc_status": "Statut du compte :",
+
+  "is_trail": "Est-ce que le sentier :",
+
+  "act_conn": "Connexion active :",
+
+  "m_conn": "Connexion maximale :",
+
+  "create_at": "Créé à :",
+
+  "ex_dt": "Date d'expiration :",
+
+  "submit": "Soumettre",
+
+  "cancel": "Annuler"
+}

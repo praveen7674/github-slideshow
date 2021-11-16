@@ -1,0 +1,25 @@
+{
+  "user_info_btn": "User Info",
+
+  "change_lang_btn": "Change Language",
+
+  "acc_info": "User Acc. Info",
+
+  "acc_name": "Account Name :",
+
+  "acc_status": "Account Status :",
+
+  "is_trail": "Is Trail :",
+
+  "act_conn": "Active Connection :",
+
+  "m_conn": "Max Connection :",
+
+  "create_at": "Created At :",
+
+  "ex_dt": "Expiry Date :",
+
+  "submit": "Submit",
+
+  "cancel": "Cancel"
+}

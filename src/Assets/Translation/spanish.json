@@ -1,0 +1,25 @@
+{
+  "user_info_btn": "Información de usuario",
+
+  "change_lang_btn": "Cambiar idioma",
+
+  "acc_info": "Usuario Acc. Info",
+
+  "acc_name": "Nombre de la cuenta :",
+
+  "acc_status": "estado de la cuenta :",
+
+  "is_trail": "Es rastro :",
+
+  "act_conn": "Conexión activa :",
+
+  "m_conn": "Conexión máxima :",
+
+  "create_at": "Creado en :",
+
+  "ex_dt": "Fecha de caducidad :",
+
+  "submit": "Enviar",
+
+  "cancel": "Cancelar"
+}

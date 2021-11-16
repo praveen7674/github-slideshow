@@ -12,6 +12,9 @@ function MovieInfo() {
   const location = useLocation();
   const stream_id = location.state.streamId;
 
+  const detail = localStorage.getItem("Detail");
+  const retrieve = JSON.parse(detail);
+
   const [movie_info, setMovie_info] = useState({});
   const [check, setCheck] = useState(false);
   const [wait, setWait] = useState(false);
@@ -19,8 +22,14 @@ function MovieInfo() {
   useEffect(() => {
     async function movieStream() {
       const API =
-        "http://xtremity.tv:2052/player_api.php?username=qyf9ax&password=p7au3w&action=get_vod_info&vod_id=" +
+        retrieve.User_play_url +
+        "/player_api.php?username=" +
+        retrieve.Username +
+        "&password=" +
+        retrieve.User_password +
+        "&action=get_vod_info&vod_id=" +
         stream_id;
+      console.log(API);
       const req = await axios.get(API);
       const res = await req.data;
       setMovie_info(res);
@@ -45,10 +54,11 @@ function MovieInfo() {
     stream_id +
     "." +
     extension1;
-
+  console.log(URL);
   const handleClick2 = () => {
     setCheck(true);
   };
+  const change_label = () => {};
   return (
     <React.Fragment>
       <Menubar />
@@ -101,9 +111,11 @@ function MovieInfo() {
                     >
                       Play
                     </button>
-                    <button className="add_Fav" type="button">
-                      Add To Favorite
-                    </button>
+                    <button
+                      onclick={() => change_label()}
+                      className="add_Fav"
+                      type="button"
+                    ></button>
                   </div>
                 </div>
               ))}

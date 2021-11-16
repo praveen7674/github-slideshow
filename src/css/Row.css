@@ -22,7 +22,8 @@
 .movie_image:hover {
   transform: scale(1.1);
   cursor: pointer;
-  transition: 0.3s;
+  border: 5px solid #f108f1;
+  transition: 0.9s;
 }
 .movie_container::-webkit-scrollbar {
   display: none;

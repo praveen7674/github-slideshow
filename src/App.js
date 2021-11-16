@@ -15,6 +15,9 @@ import EpisodeList from './components/EpisodeList';
 import PlayTrailer from './components/PlayTrailer';
 import PlayEpisode from './components/playEpisode';
 import Wait from './components/Wait';
+import Setting from './components/Setting';
+import Recent from  "./components/Recent"
+import Favourite from './components/Favourite';
 
 
 
@@ -35,8 +38,11 @@ function App() {
     <Route path="/play_episode" component={PlayEpisode}/>
     <Route path="/Movies" component={Movies}/>
     <Route path="/Profile" component={Profile}/>
+    <Route path="/Setting" component={Setting}/>
+    <Route path="/favourite" component={Favourite}/>
     <Route path="/Series" component={Series}/>
     <Route path="/Sidebar" component={Sidebar}/>
+    <Route path="/recent" component={Recent}/>
     <Route path="/Home" component={Home}/>
     <Route  component={PageNotFound}/>
     </Switch> 

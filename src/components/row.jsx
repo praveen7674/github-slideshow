@@ -4,6 +4,7 @@ import React from "react";
 import axios from "axios";
 import "..//css/Row.css";
 import Wait from "./Wait";
+
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
