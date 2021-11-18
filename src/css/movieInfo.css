@@ -89,7 +89,8 @@
 }
 .play,
 .trailer,
-.add_Fav {
+.add_Fav,
+.remove_Fav {
   top: 560px;
 }
 .add_Fav {
@@ -104,6 +105,22 @@
   border-radius: 10px;
 }
 .add_Fav:hover {
+  transform: scale(1.1);
+  cursor: pointer;
+  transition: 0.3s;
+}
+.remove_Fav {
+  position: absolute;
+  width: 200px;
+  height: 50px;
+  transition: transform 450ms;
+  color: #ffffff;
+  font-weight: bold;
+  margin-left: 400px;
+  background: #474e79;
+  border-radius: 10px;
+}
+.remove_Fav:hover {
   transform: scale(1.1);
   cursor: pointer;
   transition: 0.3s;

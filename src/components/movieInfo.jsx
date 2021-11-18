@@ -18,6 +18,8 @@ function MovieInfo() {
   const [movie_info, setMovie_info] = useState({});
   const [check, setCheck] = useState(false);
   const [wait, setWait] = useState(false);
+  const [truth, setTruth] = useState(true);
+  const [mov, setMov] = useState([]);
 
   useEffect(() => {
     async function movieStream() {
@@ -36,7 +38,8 @@ function MovieInfo() {
       setWait(true);
     }
     movieStream();
-  }, [stream_id]);
+  }, []);
+
   const extension1 = Object.values(movie_info).map(
     (x) => x.container_extension
   );
@@ -50,15 +53,40 @@ function MovieInfo() {
     });
   };
   const URL =
-    "http://xtremity.tv:2052/movie/qyf9ax/p7au3w/" +
+    retrieve.User_play_url +
+    "/movie/" +
+    retrieve.Username +
+    "/" +
+    retrieve.User_password +
+    "/" +
     stream_id +
     "." +
     extension1;
-  console.log(URL);
   const handleClick2 = () => {
     setCheck(true);
   };
-  const change_label = () => {};
+  const Img = Object.values(movie_info).map((x) => x.movie_image);
+  const image = Img[0];
+  const Name = Object.values(movie_info).map((x) => x.name);
+  const name = Name[0];
+  const item = { name, image, stream_id };
+  localStorage.setItem("Movise", JSON.stringify(mov));
+
+  const addFavourite = (a) => {
+    setTruth(false);
+    var movie = [a];
+    // movie.push(a);
+    console.log(movie);
+    localStorage.setItem("records", JSON.stringify(...movie));
+    movie.push(JSON.parse(localStorage.getItem(stream_id)));
+    setMov(...movie);
+  };
+  const removeFavourite = () => {
+    setTruth(true);
+    if ()
+    localStorage.removeItem(stream_id);
+  };
+
   return (
     <React.Fragment>
       <Menubar />
@@ -111,11 +139,23 @@ function MovieInfo() {
                     >
                       Play
                     </button>
-                    <button
-                      onclick={() => change_label()}
-                      className="add_Fav"
-                      type="button"
-                    ></button>
+                    {truth ? (
+                      <button
+                        onClick={() => addFavourite(item)}
+                        className="add_Fav"
+                        type="button"
+                      >
+                        Add Favourite
+                      </button>
+                    ) : (
+                      <button
+                        onClick={() => removeFavourite()}
+                        className="add_Fav"
+                        type="button"
+                      >
+                        Remove Favourite
+                      </button>
+                    )}
                   </div>
                 </div>
               ))}

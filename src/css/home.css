@@ -1,0 +1,49 @@
+.home_alignment {
+  margin-left: 100px;
+  margin-top: 30px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+.home_alignment > img {
+  width: 270px;
+  height: 260px;
+  border-radius: 10px;
+  border: 5px solid white;
+}
+.home_LiveTv1 {
+  width: 270px;
+  height: 260px;
+  border-radius: 10px;
+  border: 5px solid white;
+  background-image: url(..//Assets/1.png);
+}
+.home_LiveTv2 {
+  width: 270px;
+  height: 260px;
+  border-radius: 10px;
+  border: 5px solid white;
+  background-image: url(..//Assets/2.png);
+}
+.home_LiveTv3 {
+  width: 270px;
+  height: 260px;
+  border-radius: 10px;
+  border: 5px solid white;
+  background-image: url(..//Assets/3.png);
+}
+.home_LiveTv4 {
+  width: 270px;
+  height: 260px;
+  border-radius: 10px;
+  border: 5px solid white;
+  background-image: url(..//Assets/4.png);
+}
+.home_LiveTv5 {
+  width: 270px;
+  height: 260px;
+  border-radius: 10px;
+  border: 5px solid white;
+  background-image: url(..//Assets/5.png);
+}

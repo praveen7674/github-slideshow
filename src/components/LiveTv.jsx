@@ -4,6 +4,7 @@ import "../css/LiveTv.css";
 import Player from "react-player";
 import Menubar from "./Menubar";
 import Wait from "./Wait";
+import Navbar from "..//components/Navbar";
 
 const LiveTv = () => {
   const [allChannel, setAllChannel] = useState([]);
@@ -54,6 +55,7 @@ const LiveTv = () => {
 
   return (
     <React.Fragment>
+      <Navbar title="LiveTv" />
       <Menubar />
       {wait ? (
         <div className="Livetv_screen">

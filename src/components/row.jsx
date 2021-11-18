@@ -44,7 +44,7 @@ function Row(props) {
           <h3>{props.movie_name}</h3>
           <div className="movie_container">
             <Carousel
-              show={7}
+              show={6}
               slide={4}
               swiping={true}
               infinite={false}

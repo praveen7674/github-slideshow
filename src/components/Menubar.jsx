@@ -11,6 +11,9 @@ import { useState } from "react";
 function Menubar() {
   const [changeMenu, setChangeMenu] = useState(false);
 
+  // const logout = () => {
+  //   localStorage.removeItem("Detail");
+  // };
   return (
     <>
       <div className="menubar">
@@ -22,8 +25,12 @@ function Menubar() {
               <h1 className="menu_icon">
                 <GiHamburgerMenu onClick={() => setChangeMenu(true)} />
               </h1>
-              <div className="menu_logo"></div>
-              <div className="search_menu"></div>
+              <Link to="/Home">
+                <div className="menu_logo"></div>
+              </Link>
+              <Link to="/Search">
+                <div className="search_menu"></div>
+              </Link>
               <Link to="/Home">
                 <div className="icon_home"></div>
               </Link>
@@ -50,7 +57,10 @@ function Menubar() {
                 <div className="icon_setting"></div>
               </Link>
               <Link to="/Logout">
-                <div className="icon_log_out">
+                <div
+                  // onClick={() => logout()}
+                  className="icon_log_out"
+                >
                   <RiLogoutCircleRLine />
                 </div>
               </Link>

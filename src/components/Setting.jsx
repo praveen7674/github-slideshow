@@ -3,6 +3,7 @@ import axios from "axios";
 import Menubar from "./Menubar";
 import "..//css/setting.css";
 import { useTranslation } from "react-i18next";
+import Navbar from "./Navbar";
 
 function Setting() {
   const detail = localStorage.getItem("Detail");
@@ -61,6 +62,7 @@ function Setting() {
     <React.Fragment>
       <Suspense fallback="loading">
         <Menubar />
+        <Navbar title="Setting" />
         <div id="setting_true_btn">
           <button
             type="button"

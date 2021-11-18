@@ -4,6 +4,7 @@ import "..//css/movies.css";
 import axios from "axios";
 import Row from "./row";
 import Menubar from "./Menubar";
+import Navbar from "./Navbar";
 
 function Movies() {
   const [movies_category_list, setMovies_Category_List] = useState([]);
@@ -22,6 +23,7 @@ function Movies() {
 
   return (
     <React.Fragment>
+      <Navbar title="Movies" />
       <Menubar />
       {movies_category_list.map((x) => (
         <Row

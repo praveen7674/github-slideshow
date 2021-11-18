@@ -18,6 +18,7 @@ import Wait from './components/Wait';
 import Setting from './components/Setting';
 import Recent from  "./components/Recent"
 import Favourite from './components/Favourite';
+import Search from './components/Search';
 
 
 
@@ -40,6 +41,7 @@ function App() {
     <Route path="/Profile" component={Profile}/>
     <Route path="/Setting" component={Setting}/>
     <Route path="/favourite" component={Favourite}/>
+    <Route path="/Search" component={Search}/>
     <Route path="/Series" component={Series}/>
     <Route path="/Sidebar" component={Sidebar}/>
     <Route path="/recent" component={Recent}/>

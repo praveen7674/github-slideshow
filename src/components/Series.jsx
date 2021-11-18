@@ -3,6 +3,7 @@ import React from "react";
 import axios from "axios";
 import Menubar from "./Menubar";
 import SeriesRow from "./seriesRow";
+import Navbar from "./Navbar";
 
 function Movies() {
   const [series_category_list, setSeries_Category_List] = useState([]);
@@ -22,6 +23,7 @@ function Movies() {
   return (
     <React.Fragment>
       <Menubar />
+      <Navbar title="Series" />
       {series_category_list.map((x) => (
         <SeriesRow
           series_name={x.category_name}

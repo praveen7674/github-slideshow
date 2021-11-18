@@ -1,6 +1,12 @@
-.row_container {
+.row_container,
+.favourites_container {
   color: #fff;
-  margin-left: 117px;
+  margin-left: 100px;
+}
+#center_favour {
+  display: flex;
+  justify-content: center;
+  margin-top: 20%;
 }
 .movie_container {
   display: flex;
