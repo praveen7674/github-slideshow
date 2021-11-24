@@ -1,0 +1,88 @@
+.searchIcon {
+  height: 60px;
+  width: 50px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+input:focus {
+  outline: none;
+}
+.searchIcon svg {
+  font-size: 35px;
+}
+
+.dataItem > h1 {
+  font-size: 20px;
+}
+.dataResult {
+  margin-top: 5px;
+  width: 71%;
+  max-height: 100px;
+  border-radius: 10px;
+  margin-left: 15px;
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  overflow: hidden;
+  overflow-y: auto;
+}
+
+.dataResult::-webkit-scrollbar {
+  display: none;
+}
+
+.dataResult {
+  width: 71%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: black;
+}
+#search_barSpacing {
+  margin-left: 110px;
+}
+.ImageResult {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+.imageItem {
+  max-width: 80%;
+  max-height: 90%;
+  justify-content: space-around;
+}
+.imageItem_div {
+  width: 25%;
+  height: 30%;
+  margin: 10px;
+}
+.ImageResult2 {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: 120px;
+  margin-top: 20px;
+}
+.imageItem2 {
+  max-width: 100%;
+  max-height: 90%;
+}
+.imageItem_div2 > span {
+  top: 0;
+}
+.imageItem_div2 {
+  width: 20%;
+  height: 30%;
+  padding: 10px;
+  position: relative;
+  display: inline-flex;
+}
+.recent_Cancel {
+  font-size: 28px;
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  color: #bc43da;
+  z-index: 1;
+  width: 20px !important;
+  height: 20px !important;
+}

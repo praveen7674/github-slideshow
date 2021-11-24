@@ -5,11 +5,18 @@ import Menubar from "./Menubar";
 import { Link } from "react-router-dom";
 import { RiLogoutCircleRLine } from "react-icons/ri";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
-import { FaHistory, FaSearch } from "react-icons/fa";
+import { FaHistory } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
+import { useHistory } from "react-router";
 
 function Sidebar() {
   const [click, setClick] = useState(false);
+  const history = useHistory();
+
+  const logout = () => {
+    localStorage.removeItem("Detail");
+    history.push("/");
+  };
 
   return (
     <>
@@ -22,7 +29,6 @@ function Sidebar() {
               <GiHamburgerMenu onClick={() => setClick(true)} />
             </div>
             <ul>
-              {/* <FaSearch className="sidebar_searchIcon" /> */}
               <input
                 className="sidebar_search"
                 type="text"
@@ -58,8 +64,11 @@ function Sidebar() {
                 <li className="link_set">Settings</li>
               </Link>
               <Link to="/">
-                <RiLogoutCircleRLine className="icon_log_out2" />
-                <li className="link_log_out">SignIn</li>
+                <RiLogoutCircleRLine
+                  onClick={() => logout()}
+                  className="icon_log_out2"
+                />
+                <li className="link_log_out">Log out</li>
               </Link>
             </ul>
           </nav>

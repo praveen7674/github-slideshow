@@ -9,15 +9,19 @@ import {
   BsFillArrowRightCircleFill,
 } from "react-icons/bs";
 import { Carousel } from "@trendyol-js/react-carousel";
-
 import Wait from "./Wait";
+
 function SeriesInfo() {
+  const ret = JSON.parse(localStorage.getItem("Detail"));
+
   const location = useLocation();
   const series_id = location.state.seriesId;
+
   const [seriesInfo, setSeriesInfo] = useState([]);
   const [seriesSeasons, setSeriesSeasons] = useState([]);
   const [seriesEpisodes, setSeriesEpisodes] = useState([]);
   const [wait, setWait] = useState(false);
+  const [truth, setTruth] = useState(true);
 
   const history = useHistory();
   const name = seriesInfo.title;
@@ -25,13 +29,20 @@ function SeriesInfo() {
   useEffect(() => {
     async function seriesStream() {
       const API =
-        "http://xtremity.tv:2052/player_api.php?username=qyf9ax&password=p7au3w&action=get_series_info&series_id=" +
+        ret.User_play_url +
+        "/player_api.php?password=" +
+        ret.User_password +
+        "&username=" +
+        ret.Username +
+        "&action=get_series_info&series_id=" +
         series_id;
+
       const req = await axios.get(API);
       const res = await req.data;
       const seasons = res.seasons;
       const episodes = res.episodes;
       const infos = res.info;
+
       setSeriesEpisodes(episodes);
       setSeriesInfo(infos);
       setSeriesSeasons(seasons);
@@ -39,7 +50,7 @@ function SeriesInfo() {
     }
 
     seriesStream();
-  }, [history, name, seriesEpisodes, seriesSeasons, series_id]);
+  }, [ret.User_password, ret.User_play_url, ret.Username, series_id]);
 
   const Series_HandleClick = () => {
     history.push({
@@ -67,7 +78,39 @@ function SeriesInfo() {
       },
     });
   };
+  const image = seriesInfo.cover;
 
+  const addFavorite = () => {
+    const item = { image, series_id };
+    setTruth(false);
+    if (
+      localStorage.getItem("favSer") === undefined || // execute if arr is empty
+      localStorage.getItem("favSer") === null
+    ) {
+      var favSer = [];
+      favSer.push(item);
+      localStorage.setItem("favSer", JSON.stringify(favSer));
+    } else {
+      const data = JSON.parse(localStorage.getItem("favSer"));
+      data.push(item);
+      localStorage.setItem("favSer", JSON.stringify(data));
+    }
+  };
+
+  const removeFavorite = () => {
+    setTruth(true);
+    const data = JSON.parse(localStorage.getItem("favSer"));
+    var index = data.map((x) => {
+      return x.series_id;
+    });
+    console.log(index);
+
+    const id = index.filter((x) => x === series_id);
+
+    const updatedItem = data.map((x) => x.series === id);
+    data.pop(updatedItem);
+    localStorage.setItem("favSer", JSON.stringify([updatedItem]));
+  };
   return (
     <React.Fragment>
       <Menubar />
@@ -101,9 +144,23 @@ function SeriesInfo() {
               >
                 Episodes
               </button>
-              <button className="series_add_Fav" type="button">
-                Add To Favorite
-              </button>
+              {truth ? (
+                <button
+                  onClick={() => addFavorite()}
+                  className="series_add_Fav"
+                  type="button"
+                >
+                  Add Favorite
+                </button>
+              ) : (
+                <button
+                  onClick={() => removeFavorite()}
+                  className="series_add_Fav"
+                  type="button"
+                >
+                  Remove Favorite
+                </button>
+              )}
             </div>
           </div>
           <h2 className="seasons4">Seasons</h2>

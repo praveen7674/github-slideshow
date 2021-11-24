@@ -1,6 +1,7 @@
 .navbar {
   margin-left: 100px;
   height: 80px;
+  position: fixed;
   background-color: #1e2550;
 }
 .navbar > span {

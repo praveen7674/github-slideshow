@@ -4,32 +4,33 @@ import Menubar from "./Menubar";
 import "..//css/setting.css";
 import { useTranslation } from "react-i18next";
 import Navbar from "./Navbar";
+import BackButton from "./BackButton";
 
 function Setting() {
-  const detail = localStorage.getItem("Detail");
-  const retrieve = JSON.parse(detail);
+  const retrieve = JSON.parse(localStorage.getItem("Detail"));
 
   const [data, setData] = useState([]);
   const [truth, setTruth] = useState(false);
   const [lang, setLang] = useState("");
 
   useEffect(() => {
+    const userDetail = async () => {
+      const API =
+        retrieve.User_play_url +
+        "/player_api.php?username=" +
+        retrieve.Username +
+        "&password=" +
+        retrieve.User_password;
+      console.log(API);
+      const req = await axios.get(API);
+      const res = await req.data;
+      
+      const info_detail = res.user_info;
+      setData(info_detail);
+    };
     userDetail();
-  }, []);
+  }, [retrieve.User_password, retrieve.User_play_url, retrieve.Username]);
 
-  const userDetail = async () => {
-    const API =
-      retrieve.User_play_url +
-      "/player_api.php?username=" +
-      retrieve.Username +
-      "&password=" +
-      retrieve.User_password;
-    console.log(API);
-    const req = await axios.get(API);
-    const res = await req.data;
-    const info_detail = res.user_info;
-    setData(info_detail);
-  };
   const create = data.created_at;
   console.log(create);
   let createdAt = new Intl.DateTimeFormat("en-US", {
@@ -64,6 +65,7 @@ function Setting() {
         <Menubar />
         <Navbar title="Setting" />
         <div id="setting_true_btn">
+          <BackButton />
           <button
             type="button"
             value="user_info"

@@ -16,7 +16,6 @@
 #setting_true_btn {
   display: flex;
   flex-direction: column;
-  margin-top: 100px;
   margin-left: 100px;
 }
 #user_setting > h1 {

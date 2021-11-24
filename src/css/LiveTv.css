@@ -6,25 +6,46 @@
   padding-left: 10px;
 }
 .list_tv > h3 {
-  white-space: nowrap;
-  overflow: hidden;
   font-size: 20px;
   margin: 0;
-  text-overflow: ellipsis;
-  max-width: 435px;
+  text-align: center;
 }
 .active-color > h3 {
   white-space: nowrap;
   overflow: hidden;
   font-size: 20px;
   margin: 0;
+}
+.list_channel > h3 {
+  white-space: nowrap;
+  overflow: hidden;
+  font-size: 20px;
+  margin: 0;
+}
+#channel_name {
+  width: 165px;
+  margin-left: 20px;
   text-overflow: ellipsis;
-  max-width: 435px;
+}
+#categoryList_name {
+  text-align: center;
+}
+.list_channel {
+  width: 420px;
+  left: 440px;
+  top: 300px;
+  display: inline-flex;
+  background: #1e2550;
+  border-radius: 5px;
+  margin: 10px;
+  padding: 20px;
 }
 .active-color {
   width: 420px;
   left: 440px;
+  display: inline-flex;
   top: 300px;
+  text-align: center;
   background: rgb(236, 8, 236);
   border-radius: 5px;
   margin: 10px;
@@ -53,8 +74,8 @@
 }
 .boxing {
   display: flex;
-  margin-left: 120px;
-  margin-top: 123px;
+  margin-left: 100px;
+  margin-top: 2%;
   justify-content: center;
 }
 .channels > h1 {
@@ -67,28 +88,17 @@
 .list_channel > h3 {
   white-space: nowrap;
   overflow: hidden;
-  text-overflow: ellipsis;
   margin: 0;
   font-size: 20px;
 }
 .list_channel:hover {
   background: rgb(236, 8, 236);
 }
-
-.list_channel {
-  width: 420px;
-  left: 440px;
-  top: 300px;
-  background: #1e2550;
-  border-radius: 5px;
-  margin: 10px;
-  padding: 20px;
-}
 .channel_list {
   overflow-y: scroll;
   height: 890px;
   text-align: center;
-  object-fit: cover;
+  width: 440px;
 }
 .channel_list::-webkit-scrollbar {
   display: none;
@@ -96,4 +106,28 @@
 #player {
   margin-top: 46px;
   width: 55%;
+}
+.backButton {
+  color: #bc43da;
+}
+#favIcon_unselected {
+  color: white;
+  font-size: 28px;
+  position: relative;
+  z-index: 1;
+}
+#favIcon_selected {
+  font-size: 28px;
+  color: #bc43da;
+  position: relative;
+  z-index: 1;
+}
+#channel-fav-icon {
+  position: relative;
+}
+#channel_icon {
+  position: relative;
+  width: 70px;
+  height: 33.4px;
+  margin-left: 35px;
 }

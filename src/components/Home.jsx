@@ -16,7 +16,7 @@ function Home() {
         <Link to="/Movies">
           <img className="home_LiveTv2" alt="" />
         </Link>
-        <Link to="LiveTv">
+        <Link to="/Search">
           <img className="home_LiveTv3" alt="" />
         </Link>
         <Link to="/Series">

@@ -70,8 +70,8 @@
   width: 155px;
   height: 50px;
   font-weight: bold;
-  margin-left: 170px;
   color: #ffffff;
+  margin-left: 20px;
   transition: transform 450ms;
   background: #bc43da;
   border-radius: 10px;
@@ -80,18 +80,7 @@
 .series_trailer,
 .series_add_Fav,
 .series_episodes {
-  top: 590px;
-}
-.series_add_Fav {
-  position: absolute;
-  width: 155px;
-  height: 50px;
-  transition: transform 450ms;
-  color: #ffffff;
-  font-weight: bold;
-  margin-left: 512px;
-  background: #474e79;
-  border-radius: 10px;
+  top: 600px;
 }
 .series_add_Fav:hover,
 .series_episodes:hover,
@@ -101,13 +90,13 @@
   cursor: pointer;
   transition: 0.3s;
 }
-.series_trailer {
+.series_add_Fav {
   position: absolute;
   width: 155px;
   height: 50px;
   font-weight: bold;
   color: #ffffff;
-  margin-left: 0;
+  margin-left: 400px;
   transition: transform 450ms;
   background: #bc43da;
   border-radius: 10px;
@@ -119,7 +108,7 @@
   transition: transform 450ms;
   color: #ffffff;
   font-weight: bold;
-  margin-left: 340px;
+  margin-left: 210px;
   background: #bc43da;
   border-radius: 10px;
 }

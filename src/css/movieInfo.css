@@ -4,7 +4,7 @@
   margin-left: 117px;
   width: 1400px;
   height: 902px;
-  margin: 70px 70px 70px 400px;
+  margin: 0px 70px 70px 300px;
 }
 .movie_com_detail {
   margin-left: 650px;
@@ -155,4 +155,7 @@ video {
 .movies_container > img {
   width: 595px;
   border-radius: 10px;
+}
+#btn {
+  margin-left: 100px;
 }

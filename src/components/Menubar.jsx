@@ -7,13 +7,17 @@ import { FaHistory } from "react-icons/fa";
 import { GiHamburgerMenu } from "react-icons/gi";
 import Sidebar from "../components/Sidebar";
 import { useState } from "react";
+import { useHistory } from "react-router";
 
 function Menubar() {
   const [changeMenu, setChangeMenu] = useState(false);
+  const history = useHistory();
 
-  // const logout = () => {
-  //   localStorage.removeItem("Detail");
-  // };
+  const logout = () => {
+    localStorage.removeItem("Detail");
+    history.push("/");
+  };
+
   return (
     <>
       <div className="menubar">
@@ -43,7 +47,7 @@ function Menubar() {
               <Link to="/Series">
                 <div className="icon_series"></div>
               </Link>
-              <Link to="/favourite">
+              <Link to="/favorite">
                 <div className="icon_favorite">
                   <MdOutlineFavoriteBorder />
                 </div>
@@ -56,11 +60,8 @@ function Menubar() {
               <Link to="/Setting">
                 <div className="icon_setting"></div>
               </Link>
-              <Link to="/Logout">
-                <div
-                  // onClick={() => logout()}
-                  className="icon_log_out"
-                >
+              <Link to="/">
+                <div onClick={() => logout()} className="icon_log_out">
                   <RiLogoutCircleRLine />
                 </div>
               </Link>

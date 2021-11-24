@@ -2,7 +2,6 @@ import './App.css';
 import Home from './components/Home';
 import LiveTv from './components/LiveTv';
 import Movies from './components/Movies';
-import Profile from './components/Profile';
 import Series from './components/Series';
 import Sidebar from './components/Sidebar';
 import SignIn from './components/SignIn';
@@ -17,7 +16,7 @@ import PlayEpisode from './components/playEpisode';
 import Wait from './components/Wait';
 import Setting from './components/Setting';
 import Recent from  "./components/Recent"
-import Favourite from './components/Favourite';
+import Favorite from './components/Favorite';
 import Search from './components/Search';
 
 
@@ -29,23 +28,22 @@ function App() {
     <div className="App">
     <Switch>
     <Route path="/" exact component={SignIn}/>
-    <Route path="/episodeList" component={EpisodeList}/>
-    <Route path="/movie_Info" component={MovieInfo}/>
-    <Route path="/seriesList" component={SeriesList}/>
-    <Route path="/seriesInfo"  component={SeriesInfo}/>
+    <Route path="/Home" component={Home}/>
     <Route path="/LiveTv" component={LiveTv}/>
+    <Route path="/Movies" component={Movies}/>
+    <Route path="/movie_Info" component={MovieInfo}/>
+    <Route path="/Series" component={Series}/>
+    <Route path="/seriesInfo"  component={SeriesInfo}/>
+    <Route path="/episodeList" component={EpisodeList}/>
+    <Route path="/seriesList" component={SeriesList}/>
     <Route path="/wait" component={Wait}/>
     <Route path="/play_trailer" component={PlayTrailer}/>
     <Route path="/play_episode" component={PlayEpisode}/>
-    <Route path="/Movies" component={Movies}/>
-    <Route path="/Profile" component={Profile}/>
     <Route path="/Setting" component={Setting}/>
-    <Route path="/favourite" component={Favourite}/>
+    <Route path="/favorite" component={Favorite}/>
     <Route path="/Search" component={Search}/>
-    <Route path="/Series" component={Series}/>
     <Route path="/Sidebar" component={Sidebar}/>
     <Route path="/recent" component={Recent}/>
-    <Route path="/Home" component={Home}/>
     <Route  component={PageNotFound}/>
     </Switch> 
     </div>

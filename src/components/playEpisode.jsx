@@ -3,9 +3,19 @@ import { useLocation } from "react-router";
 import Player from "react-player";
 
 function PlayEpisode() {
+  const ret = JSON.parse(localStorage.getItem("Detail"));
+
   const location = useLocation();
   const Id = location.state.episodeId;
-  const URL = "http://xtremity.tv:2052/series/qyf9ax/p7au3w/" + Id + ".mkv"; //
+  const URL =
+    ret.User_play_url +
+    "/series/" +
+    ret.Username +
+    "/" +
+    ret.User_password +
+    "/" +
+    Id +
+    ".mkv";
 
   return (
     <React.Fragment>
