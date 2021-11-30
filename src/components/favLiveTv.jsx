@@ -22,11 +22,14 @@ function FavLiveTv(props) {
         <h3>Live Tv</h3>
         <div>
           {props.fav.map((x) => (
-            <div className="list_channel" key={x.LiveTv_id}>
+            <div
+              className="list_channel"
+              key={x.LiveTv_id}
+              onClick={() => handleClick(x.category_id, x.stream_id)}
+            >
               {x.LiveTv_id}
               <img id="channel_icon" src={x.icon} alt="" />
               <h3 id="channel_name">{x.name}</h3>
-              onClick={() => handleClick(x.category_id, x.stream_id)}
             </div>
           ))}
         </div>

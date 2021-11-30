@@ -18,6 +18,7 @@ import Setting from './components/Setting';
 import Recent from  "./components/Recent"
 import Favorite from './components/Favorite';
 import Search from './components/Search';
+import Parse from './components/parse';
 
 
 
@@ -44,6 +45,7 @@ function App() {
     <Route path="/Search" component={Search}/>
     <Route path="/Sidebar" component={Sidebar}/>
     <Route path="/recent" component={Recent}/>
+    <Route path="/parse" component={Parse}/>
     <Route  component={PageNotFound}/>
     </Switch> 
     </div>

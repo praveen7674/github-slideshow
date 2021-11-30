@@ -33,8 +33,6 @@ const LiveTv = () => {
       ".m3u8"
   );
   const location = useLocation();
-  setCategories(location.state.category_id);
-  setChannels(location.state.stream_id);
 
   useEffect(() => {
     const handleChannelLogic = async () => {
@@ -48,6 +46,8 @@ const LiveTv = () => {
       const resp = await axios.get(API);
       const com_category = await resp.data;
       setCategory(com_category);
+      // setChannels(location.state.stream_id);
+      // setCategories(location.state.category_id);
 
       const API2 =
         ret.User_play_url +

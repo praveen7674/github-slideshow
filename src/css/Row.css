@@ -22,8 +22,7 @@
   border: 2px solid #ffffff;
   box-sizing: border-box;
   border-radius: 15px;
-  width: 259px;
-  height: 311px;
+  width: 75%;
 }
 .movie_image:hover {
   transform: scale(1.1);

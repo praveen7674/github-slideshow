@@ -1,6 +1,8 @@
-.home_alignment {
+.home_align2 {
   margin-left: 100px;
   margin-top: 30px;
+}
+.home_alignment {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
@@ -46,4 +48,15 @@
   border-radius: 10px;
   border: 5px solid white;
   background-image: url(..//Assets/5.png);
+}
+.Series_home {
+  overflow-x: scroll;
+  width: 90%;
+}
+.home_series_scroll {
+  margin-top: 30px;
+  margin-left: 10px;
+}
+.home_series_scroll > h1 {
+  font-size: 30px;
 }

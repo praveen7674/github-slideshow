@@ -4,7 +4,6 @@ import React from "react";
 import axios from "axios";
 import "..//css/Row.css";
 import Wait from "./Wait";
-
 import {
   BsFillArrowLeftCircleFill,
   BsFillArrowRightCircleFill,
@@ -26,7 +25,7 @@ function Row(props) {
         ret.User_password +
         "&username=" +
         ret.Username +
-        "&action=get_vod_streams"; // All Movies LIst
+        "&action=get_vod_streams";                       // All Movies LIst
       const req = await axios.get(API);
       const res = await req.data;
       const id = props.ids;

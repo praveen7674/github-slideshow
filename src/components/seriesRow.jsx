@@ -26,7 +26,7 @@ function SeriesRow(props) {
         ret.User_password +
         "&username=" +
         ret.Username +
-        "&action=get_series"; // All series LIst
+        "&action=get_series";                             // All series LIst
       const req = await axios.get(API);
       const res = await req.data;
       const id = props.ids;
