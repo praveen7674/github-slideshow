@@ -8,7 +8,7 @@ import Navbar from "..//components/Navbar";
 import BackButton from "./BackButton";
 import { GrFavorite } from "react-icons/gr";
 import { MdFavorite } from "react-icons/md";
-import { useLocation } from "react-router";
+// import { useLocation } from "react-router";
 
 const LiveTv = () => {
   const ret = JSON.parse(localStorage.getItem("Detail"));
@@ -32,7 +32,7 @@ const LiveTv = () => {
       3043214 +
       ".m3u8"
   );
-  const location = useLocation();
+  // const location = useLocation();
 
   useEffect(() => {
     const handleChannelLogic = async () => {

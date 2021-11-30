@@ -5,6 +5,7 @@ import Row from "./row";
 import Menubar from "./Menubar";
 import Navbar from "./Navbar";
 import BackButton from "./BackButton";
+import Parse from "./parse";
 
 function Movies() {
   const ret = JSON.parse(localStorage.getItem("Detail"));
@@ -41,6 +42,7 @@ function Movies() {
           key={x.category_id}
         />
       ))}
+      <Parse />
     </React.Fragment>
   );
 }
