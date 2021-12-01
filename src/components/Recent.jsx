@@ -19,23 +19,35 @@ function Recent() {
     window.location.reload(false);
   };
 
-  return (
-    <React.Fragment>
-      <Menubar />
-      <Navbar title="Recent" />
-      <div className="ImageResult2">
-        {data1.map((x) => (
-          <div className="imageItem_div2" key={x.Id}>
-            <img className="imageItem2" src={x.Img} alt="" />
-            <GiCancel
-              className="recent_Cancel"
-              onClick={() => removeRecent(x.Id)}
-            />
-          </div>
-        ))}
-      </div>
-    </React.Fragment>
-  );
+  if (data1 === null) {
+    return (
+      <React.Fragment>
+        <Menubar />
+        <Navbar title="Recent" />
+        <div id="center_favour">
+          <h1 id="center_favorite">Nothing To show</h1>
+        </div>
+      </React.Fragment>
+    );
+  } else {
+    return (
+      <React.Fragment>
+        <Menubar />
+        <Navbar title="Recent" />
+        <div className="ImageResult2">
+          {data1.map((x) => (
+            <div className="imageItem_div2" key={x.Id}>
+              <img className="imageItem2" src={x.Img} alt="" />
+              <GiCancel
+                className="recent_Cancel"
+                onClick={() => removeRecent(x.Id)}
+              />
+            </div>
+          ))}
+        </div>
+      </React.Fragment>
+    );
+  }
 }
 
 export default Recent;
