@@ -1,10 +1,12 @@
 import axios from "axios";
 import React, { useState } from "react";
+import { useDispatch } from "react-redux";
 import "../css/SignIn.css";
+import { LogIn } from "..//features/user/userSlice";
 import Home from "./Home";
 
 function SignIn() {
-  const [User, setUser] = useState(" ");
+  const [username, setUserName] = useState(" ");
   const [password, setPassword] = useState("");
   const [playlist, setPlaylist] = useState("");
   const [play_url, setPlay_url] = useState("");
@@ -12,19 +14,21 @@ function SignIn() {
   const [Active, setActive] = useState("");
 
   const User_Detail = {
-    Username: User,
+    Username: username,
     User_password: password,
     User_play_url: play_url,
   };
 
+  const dispatch = useDispatch();
+
   localStorage.setItem("Detail", JSON.stringify(User_Detail));
 
-  async function login() {
+  const login = async () => {
     const request = await axios.get(
       play_url +
         "/player_api.php" +
         "?username=" +
-        User +
+        username +
         "&password=" +
         password
     );
@@ -32,7 +36,9 @@ function SignIn() {
     setData(body.user_info);
     const active_user = Data.status;
     setActive(active_user);
-  }
+    dispatch(LogIn({ playlist, username, password, play_url }));
+  };
+
   return (
     <div>
       {Active === "Active" ? (
@@ -55,9 +61,9 @@ function SignIn() {
                 />
                 <input
                   className="Username"
-                  onChange={(e) => setUser(e.target.value)}
+                  onChange={(e) => setUserName(e.target.value)}
                   type="name"
-                  value={User}
+                  value={username}
                   placeholder="Enter Username"
                   required
                 />
@@ -80,14 +86,18 @@ function SignIn() {
                 <span className="Forget">
                   <b>Forget Password</b>
                 </span>
-                <button onClick={login} className="Login_btn" type="submit">
-                  Login
-                </button>
                 <input className="checkbox" type="checkbox" required />
                 <label className="cb_text" required>
                   I have read and agree
                   <span className="Service"> Term of Service </span>
                 </label>
+                <button
+                  className="Login_btn"
+                  type="submit"
+                  onClick={() => login()}
+                >
+                  Login
+                </button>
               </form>
             </div>
           </div>
