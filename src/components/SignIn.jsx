@@ -5,9 +5,9 @@ import Home from "./Home";
 
 function SignIn() {
   const [User, setUser] = useState(" ");
-  const [password, setpassword] = useState("");
-  const [playlist, setplaylist] = useState("");
-  const [play_url, setplay_url] = useState("");
+  const [password, setPassword] = useState("");
+  const [playlist, setPlaylist] = useState("");
+  const [play_url, setPlay_url] = useState("");
   const [Data, setData] = useState([]);
   const [Active, setActive] = useState("");
 
@@ -48,7 +48,7 @@ function SignIn() {
               <form>
                 <input
                   className="Playlist_name"
-                  onChange={(e) => setplaylist(e.target.value)}
+                  onChange={(e) => setPlaylist(e.target.value)}
                   type="text"
                   placeholder="Enter Playlist"
                   value={playlist}
@@ -63,7 +63,7 @@ function SignIn() {
                 />
                 <input
                   className="Password"
-                  onChange={(e) => setpassword(e.target.value)}
+                  onChange={(e) => setPassword(e.target.value)}
                   type="password"
                   value={password}
                   placeholder="Enter Password"
@@ -71,7 +71,7 @@ function SignIn() {
                 />
                 <input
                   className="Input_url"
-                  onChange={(e) => setplay_url(e.target.value)}
+                  onChange={(e) => setPlay_url(e.target.value)}
                   type="url"
                   value={play_url}
                   placeholder="Enter Playlist Url"
